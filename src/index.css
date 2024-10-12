@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(38, 38, 38);
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 400px;
+  margin: 80px auto 0px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 16px 32px;
+  width:100%;
+  color: white;
+
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
+}
