@@ -26,7 +26,7 @@ export function App() {
   return (
     <main>
       <div className="profile">
-        <img src="/eudeternorosto.jfif" alt="Vinicius" className="profile-photo" />
+        <img src="/public/eudeternorosto.jfif" alt="Vinicius" className="profile-photo" />
         <p className="bio">Hi, I'm Vinicius. I'm passionate about technology, cybersecurity, and programming. Welcome to my page! </p>
       </div>
       
