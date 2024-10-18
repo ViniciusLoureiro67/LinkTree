@@ -9,7 +9,7 @@ const links = [
   { id: 1, url: 'https://www.linkedin.com/in/vsloureiro/', title: 'Linkedin', icon: faLinkedin },
   { id: 2, url: 'https://www.youtube.com/@Theviniciusjourney', title: 'Youtube', icon: faYoutube },
   { id: 3, url: 'https://instagram.com/vini.cyber', title: 'Instagram', icon: faInstagram },
-  { id: 4, url: '/public/Vinicius_resume.pdf', title: 'Get My Professional CV', icon: faFileDownload, download: true },
+  { id: 4, url: '/Vinicius_resume.pdf', title: 'Get My Professional CV', icon: faFileDownload, download: true },
   { id: 5, url: 'https://wa.me/971558039150', title: 'Reach Me on WhatsApp', icon: faWhatsapp }
 ];
 
@@ -26,7 +26,7 @@ export function App() {
   return (
     <main>
       <div className="profile">
-        <img src="/public/eudeternorosto.jpg" alt="Vinicius" className="profile-photo" />
+        <img src="/eudeternorosto.jpg" alt="Vinicius" className="profile-photo" />
         <p className="bio">Hi, I'm Vinicius. I'm passionate about technology, cybersecurity, and programming. Welcome to my page! </p>
       </div>
       
