@@ -1,44 +1,31 @@
-import { faLinkedin, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
-
-
-
-import { Link } from './Link'
-
-const links = [
-  { id: 1, url: 'https://www.linkedin.com/in/vsloureiro/', title: 'Linkedin', icon: faLinkedin },
-  { id: 2, url: 'https://www.youtube.com/@Theviniciusjourney', title: 'Youtube', icon: faYoutube },
-  { id: 3, url: 'https://instagram.com/vini.cyber', title: 'Instagram', icon: faInstagram },
-  { id: 4, url: '/Vinicius_resume.pdf', title: 'Get My Professional CV', icon: faFileDownload, download: true },
-  { id: 5, url: 'https://wa.me/971558039150', title: 'Reach Me on WhatsApp', icon: faWhatsapp }
-];
-
-
-import { Footer } from './Footer'
-
-const footers = [
-  {id: 1, url: 'https://www.linkedin.com/in/vsloureiro/', title: 'Click Here to see my Linkedin Profile' }
-]
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navigation } from './components/common/Navigation';
+import { Footer } from './components/common/Footer';
+import { Home } from './pages/Home';
+import { Portfolio } from './pages/Portfolio';
+import { ProjectDetails } from './pages/ProjectDetails';
+import { GradientBlobs } from './components/backgrounds/GradientBlobs';
+import './App.css';
 
 export function App() {
   return (
-    <main>
-      <div className="profile">
-        <img src="/eudeternorosto.jpg" alt="Vinicius" className="profile-photo" />
-        <p className="bio">Hi, I'm Vinicius. I'm passionate about technology, cybersecurity, and programming. Welcome to my page! </p>
+    <Router>
+      <div className="app flex flex-col min-h-screen">
+        {/* Skip Link para acessibilidade */}
+        <a href="#main-content" className="skip-link">
+          Pular para conteúdo principal
+        </a>
+        <GradientBlobs />
+        <Navigation />
+        <main id="main-content" className="main-content flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:projectId" element={<ProjectDetails />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      
-      <h1>Connect with Me</h1>
-      {links.map((item) => (
-        <Link key={item.id} title={item.title} url={item.url} icon={item.icon} download={item.download} />
-      ))}
-
-      {footers.map((footer) => (
-        <Footer key={footer.id} url={footer.url} title={footer.title} />
-      ))}
-    </main>
+    </Router>
   );
 }
-
