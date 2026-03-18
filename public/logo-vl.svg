@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="vlBrandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6F1C80"/>
+      <stop offset="100%" style="stop-color:#32446C"/>
+    </linearGradient>
+    <linearGradient id="vlTextGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C084FC"/>
+      <stop offset="50%" style="stop-color:#A855F7"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle with brand gradient -->
+  <circle cx="50" cy="50" r="48" fill="url(#vlBrandGradient)" />
+
+  <!-- Decorative ring -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- V letter - stylized -->
+  <path d="M25 28 L38 72 L50 45 L50 45" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- L letter - stylized -->
+  <path d="M50 28 L50 72 L75 72" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Subtle glow effect -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="url(#vlTextGradient)" stroke-width="2" opacity="0.6"/>
+</svg>
