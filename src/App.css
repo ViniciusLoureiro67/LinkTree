@@ -1,0 +1,188 @@
+/* ========================================
+   App Layout Styles
+   ======================================== */
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.main-content {
+  width: 100%;
+  position: relative;
+}
+
+/* Legacy support for old pages */
+.main-content.legacy {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+/* Para a página de portfólio, aumentar a largura máxima */
+.main-content:has(.portfolio-page) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Project details page */
+.main-content:has(.project-details-page) {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.links-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ========================================
+   Navigation Styles
+   ======================================== */
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 14, 39, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .nav-inner {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-inner {
+    padding: 0 2rem;
+  }
+}
+
+/* ========================================
+   Section Styles
+   ======================================== */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #a3a3a3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   Grid Layouts
+   ======================================== */
+
+.grid-cols-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
